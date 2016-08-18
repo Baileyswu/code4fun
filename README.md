@@ -1,7 +1,7 @@
 # AI's Wiki
 标签: AI
 ***
-[TOC]
+
 ## Todo List
     
     1. 图论: 树链剖分 网络流 差分约束 2-sat 连通性
@@ -15,7 +15,6 @@
 
 重点是前三个,理解深入.
 
-<<<<<<< HEAD
 ## Training
 
 ***（加粗加斜的是尝试了但没过的题）***
@@ -147,12 +146,6 @@ todolist关键字  CF题集
 网络流,DP,数据结构,图论
 todolist关键字 整理模板
 
-[Starry]()
+[Starry](https://starry-xin.github.io/)
 DP,图论,数学,字符串
-=======
-***
-blabla
-lababa
-****
-fjdajlgdka
->>>>>>> 278733e593c1b4b2d74ffbca592c7390014b763f
+
