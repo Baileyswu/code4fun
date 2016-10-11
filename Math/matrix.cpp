@@ -23,7 +23,7 @@ struct Matrix{
 	}
 	Matrix operator + (const Matrix &b) const{
 		Matrix tmp;
-		tmp.n = n; tmp.m = m; //where is n, m, a[i][j] from?
+		tmp.n = n; tmp.m = m;
 		for(int i = 0;i < n;i++)
 			for(int j = 0;j < m;j++)
 				tmp.a[i][j] = a[i][j] + b.a[i][j];
@@ -31,7 +31,7 @@ struct Matrix{
 	}
 	Matrix operator - (const Matrix &b) const{
 		Matrix tmp;
-		tmp.n = n; tmp.m = m; //where is n, m, a[i][j] from?
+		tmp.n = n; tmp.m = m;
 		for(int i = 0;i < n;i++)
 			for(int j = 0;j < m;j++)
 				tmp.a[i][j] = a[i][j] - b.a[i][j];
@@ -40,10 +40,10 @@ struct Matrix{
 	Matrix operator * (const Matrix &b) const{
 		Matrix tmp;
 		tmp.clear();
-		tmp.n = n; tmp.m = b.m; //where is n, m, a[i][j] from?
+		tmp.n = n; tmp.m = b.m;
 		for(int i = 0;i < n;i++)
 			for(int j = 0;j < b.m;j++)
-				for(int k = 0;k < m;k++)
+				for(int k = 0;k < m;k++) if(a[i][k] && b.a[k][j]) //avoid TLE
 					tmp.a[i][j] += a[i][k] * b.a[k][j];
 		return tmp;
 	}
