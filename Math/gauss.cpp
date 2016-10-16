@@ -22,3 +22,7 @@ int gauss() {
     }
     return n-i;
 }
+
+double gauss(int n, int m) {
+	
+}
