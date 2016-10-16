@@ -6,9 +6,6 @@ struct pt
     double x, y;
     pt(){}
     pt(double x, double y): x(x), y(y){}
-    void sc(){
-        scanf("%lf%lf", &x, &y);
-    }
     bool eq(pt a){
         return !delta(x-a.x) && !delta(y-a.y);
     }
