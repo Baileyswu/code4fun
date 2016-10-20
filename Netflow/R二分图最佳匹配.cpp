@@ -100,7 +100,7 @@ int main()
 			for(int j=1; j<=ch; j++)
 			{
 				w[i][j]=-Dis(i, j);
-				lx[i]=min(lx[i], w[i][j]);//lx[i]：i结点相连边的最小权值
+				lx[i]=max(lx[i], w[i][j]);//lx[i]：i结点相连边的最大权值
 			}
 		}
 
