@@ -7,6 +7,7 @@ nmap <F4> :vs %<.in <CR>
 nmap <F5> :!./%< < %<.in <CR>
 nmap <F6> :!./%< < %<.in > %<.out <CR> :vs %<.out <CR>
 nmap <F7> ggVG "+y
+nmap <F8> gg=G
 nmap <F12> :wq<CR>
 nmap <TAB> <SPACE><SPACE><SPACE><SPACE>
 colorscheme delek
