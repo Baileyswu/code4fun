@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+/*--------------------------------------------
+ * File Name: ${1:Algorithm}
+ * Author: Danliwoo
+ * Mail: Danliwoo@outlook.com
+ * Created Time: ${2:addtime}
+--------------------------------------------*/
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>cpr</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>audo add copyright</description>
+</snippet>
