@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include "big.h"
 using namespace std;
-
+const int SUFF = (int)1e5;
 struct Float
 {
 	Big value;
@@ -55,6 +55,17 @@ struct Float
 	void simplify() {
 		str = to_str(value);
 		remove_tailzero();
+		if(str.length() > SUFF) {
+			string temp = str.substr(0, SUFF);
+			expo += str.length() - SUFF;
+			value = from_str(temp);
+			if(str[SUFF] > '4') {
+				Big a = from_str("1");
+				value = value + a;
+			}
+			str = to_str(value);
+			remove_tailzero();
+		}
 	}
 };
 ostream& operator<<(ostream &out, const Float &f) {
