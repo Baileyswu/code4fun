@@ -11,7 +11,7 @@
 #include<cstdio>
 #include<cmath>
 #include<algorithm>
-using namespace std
+using namespace std;
 typedef long long lint;
 const int MAXN=5000+10;
 
