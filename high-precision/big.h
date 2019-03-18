@@ -41,7 +41,7 @@ Big operator * (const Big &a, const Big &b) {
 	return c;
 }
 Big operator - (const Big &a, const Big &b) {
-	cout << "op=" << a << "-" << b << endl;
+	// cout << "op=" << a << "-" << b << endl;
 	Big c (max(a.size(), b.size()), 0);
 	for (int i = 0; i < (int) c.size(); ++ i) {
 		if (i < (int) a.size()) c[i] += a[i];
@@ -90,7 +90,7 @@ string to_str(const Big &a) {
 	}
 	int i = 0;
 	while(s[i] == '0' && i != (int)s.length()-1) i++;
-	return s.substr(i, s.length()-i);
+	return s.substr(i);
 }
 int s_to_n(const string &s) {
 	int ret = 0, len = (int) s.length();
