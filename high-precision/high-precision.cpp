@@ -142,8 +142,11 @@ int align(Float &a, Float &b) {
 Float operator - (Float &a, Float &b) {
 	Float c;
 	int flag = align(a, b);
-	if(flag)
-		return flag > 0 ? a : b;
+	if(flag) {
+		c = flag > 0 ? a : b;
+		c.sign = flag > 0 ? true : false;
+		return c;
+	}
 	if(a.value < b.value) {
 		c.expo = b.expo;
 		c.value = b.value - a.value;

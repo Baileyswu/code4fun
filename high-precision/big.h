@@ -61,12 +61,25 @@ bool operator < (const Big &a, const Big &b) {
 	}
 	return false;
 }
+Big operator % (const Big &a, const Big &b) { // only for binary mod
+	Big c{0}, t(1);
+	for(int i = (int)a.size()-1;i >= 0;i--) {
+		if(a[i] == 0)
+			c.insert(c.begin(), 1, 0);
+		else
+			c.insert(c.begin(), 1, 1);
+		if (!c.empty() && c.back() == 0) c.pop_back();
+		if(c < b) continue;
+		c = c - b;
+	}
+	return c;
+}
 Big from_str(const string s) {
 	int n = (int) s.length();
 	Big a;
-	for (int i = n - 1; i >= 0; i -= 8) {
+	for (int i = n - 1; i >= 0; i -= Dn) {
 		int num = 0;
-		for (int j = min(7, i); j >= 0; -- j) {
+		for (int j = min(Dn-1, i); j >= 0; -- j) {
 			num = num * 10 + (s[i - j] - '0');
 		}
 		a.push_back(num);
