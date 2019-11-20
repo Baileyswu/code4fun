@@ -1,0 +1,11 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    {
+		"key": "ctrl+alt+.",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND"
+        }
+    }
+]
