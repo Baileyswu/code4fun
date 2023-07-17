@@ -25,6 +25,7 @@
         "iterator": "cpp",
         "map": "cpp",
         "set": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "queue": "cpp"
     }
 }
